@@ -5,6 +5,7 @@ Trait InfosUserThemeActive {
 
     use InfosUser;
     use ThemeActive;
+    use AnneeCourante;
     /**
      * ThemeActive est un trait qui permet de recuperer le chemin du 
      * theme activer avec la methode verifit_theme_active()
@@ -18,6 +19,7 @@ Trait InfosUserThemeActive {
     public $chemin_theme_actif;
     public $nom;
     public $avatar;
+    public $annee_courante;
 
     /**
      * on créer la methode InfosUser_AND_Theme_Active pour initialiser les 
@@ -29,6 +31,8 @@ Trait InfosUserThemeActive {
         $info_user_connecter = $this->user_connecter();
         $this->nom = $info_user_connecter->nom;
         $this->avatar = $info_user_connecter->avatar;
+
+        $this->annee_courante = $this->verifit_annee_courante();
     }
 }
 

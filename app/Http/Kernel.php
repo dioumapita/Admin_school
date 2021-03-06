@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\FirstLoginPersonel;
 use App\Http\Middleware\LastUserActivity;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -38,11 +39,12 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-
+            
             // middleware utiliser pour afficher les utilisateurs connectés
             \App\Http\Middleware\LastUserActivity::class,
             // middleware utiliser pour sweate alert
             \RealRashid\SweetAlert\ToSweetAlert::class,
+           
 
         ],
 
@@ -70,5 +72,11 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        /**
+         *  middleware utiliser pour verifier si c'est la première connexion de l'utilisateur(enseignant,comptable ...)
+         * si c'est sa première connexion l'obliger a changer de mot de passe
+         */
+        'first.login' =>  \App\Http\Middleware\FirstLoginPersonel::class,
     ];
 }

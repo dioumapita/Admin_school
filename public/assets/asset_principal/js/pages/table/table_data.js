@@ -203,7 +203,7 @@ $(document).ready(function() {
 				dom: 'Bfrtip',
 				stateSave: true,
 				paginate:true,
-				displayLength: 2,
+				displayLength: 5,
 				buttons: [
 					{
 						extend: 'print',
@@ -259,11 +259,23 @@ $(document).ready(function() {
 					sInfoFiltered: "(Filtré à partir de _MAX_ éléments au total)"
 				}
 			});
+
+			/**
+			 * test a supprimer ptre
+			 */
+			$('#test_notes').DataTable({
+	
+			 	displayLength:2
+			})
+
+			/**
+			 *  utiliser au niveau des matieres
+			 */
 			$('#matieres').DataTable({
 				dom: 'Bfrtip',
 				stateSave: true,
 				paginate:true,
-				displayLength: 2,
+				displayLength:5,
 				buttons: [
 					{
 						extend: 'print',
@@ -320,7 +332,102 @@ $(document).ready(function() {
 				}
 			});
 			
-
+			/**
+			 * utiliser au niveau de la saisi des notes
+			 */
+			$('#notes').DataTable({
+				dom: 'Bfrtip',
+				stateSave: true,
+				paginate:true,
+				displayLength: 2,
+				buttons: [
+					{
+						extend: 'colvis',
+						collectionLayout: 'fixed two-column',
+						text: 'Visiblité de la colonne'
+					}
+				],
+				language: {
+					buttons: {
+						copyTitle: 'Ajouté au presse-papiers',
+						copyKeys: 'Appuyez sur <i>ctrl</i> ou <i>\u2318</i> + <i>C</i> pour copier les données du tableau à votre presse-papiers. <br><br>Pour annuler, cliquez sur ce message ou appuyez sur Echap.',
+						copySuccess: {
+							_: '%d lignes copiées',
+							1: '1 ligne copiée'
+						}
+					},
+					paginate:{
+						previous: 'Précédent',
+						next: 'Suivant'
+					},
+					search: 'Chercher',
+					zeroRecords: 'Aucun élément correspondant trouvé',
+					info: "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
+					sInfoEmpty: "Affichage de l'élément 0 à 0 sur 0 élément",
+					sInfoFiltered: "(Filtré à partir de _MAX_ éléments au total)"
+				}
+			});
+			/**
+			 * utiliser au niveau de l'affichage des notes
+			 */
+			$('#liste_notes').DataTable({
+				stateSave: true,
+				dom: 'Bfrtip',
+				buttons: [
+					{
+						extend: 'print',
+						text: 'impr',
+						exportOptions: {
+							columns: ':visible'
+						}
+					},
+					{
+						extend: 'pdf',
+						exportOptions: {
+							columns: ':visible'
+						}
+					},
+					{
+						extend: 'excel',
+						exportOptions: {
+							columns: ':visible',
+							autoFilter: true,
+							sheetName: 'Exported data'
+						}
+					},
+					{
+						extend: 'copy',
+						text: 'copier',
+						exportOptions: {
+							columns: ':visible'
+						}
+					},
+					{
+						extend: 'colvis',
+						collectionLayout: 'fixed two-column',
+						text: 'Visiblité de la colonne'
+					}
+				],
+				language: {
+					buttons: {
+						copyTitle: 'Ajouté au presse-papiers',
+						copyKeys: 'Appuyez sur <i>ctrl</i> ou <i>\u2318</i> + <i>C</i> pour copier les données du tableau à votre presse-papiers. <br><br>Pour annuler, cliquez sur ce message ou appuyez sur Echap.',
+						copySuccess: {
+							_: '%d lignes copiées',
+							1: '1 ligne copiée'
+						}
+					},
+					paginate:{
+						previous: 'Précédent',
+						next: 'Suivant'
+					},
+					search: 'Chercher',
+					zeroRecords: 'Aucun élément correspondant trouvé',
+					info: "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
+					sInfoEmpty: "Affichage de l'élément 0 à 0 sur 0 élément",
+					sInfoFiltered: "(Filtré à partir de _MAX_ éléments au total)"
+				}
+			});
 
 
 

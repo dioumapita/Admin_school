@@ -21,7 +21,7 @@ class ListesNotes extends Component
 
     public function mount()
     {
-        $this->all_niveaux = Niveau::first();
+        $this->all_niveaux = Niveau::get();
         
         // $niv = Niveau::first();
     

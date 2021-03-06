@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Traits\InfosUser;
 use App\Traits\ThemeActive;
 use Illuminate\Http\Request;
+use App\Traits\AnneeCourante;
+use App\mes_models\Annee;
 
 class ProfilsController extends Controller
 {
     //
     use ThemeActive;
     use InfosUser;
-
+    use AnneeCourante;
     /**
      * ThemeActive est un trait qui permet de recuperer le chemin du 
      * theme activer avec la methode verifit_theme_active()
@@ -28,7 +30,9 @@ class ProfilsController extends Controller
          $info_user_connecter = $this->user_connecter();
          $nom = $info_user_connecter->nom;
          $avatar = $info_user_connecter->avatar;
+         $annee_courante = $this->verifit_annee_courante();
+         $all_annee = Annee::all();
 
-        return view('pages.profils/mon_profil',compact('chemin_theme_actif','nom','avatar'));
+        return view('pages.profils/mon_profil',compact('chemin_theme_actif','nom','avatar','annee_courante','all_annee'));
     }
 }

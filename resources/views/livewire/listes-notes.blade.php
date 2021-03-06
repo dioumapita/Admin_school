@@ -29,22 +29,17 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="btn-group pull-left">
-                                {{-- <form wire:submit.prevent='envoi'>
+                                <form wire:submit.prevent='envoi'>
                                     <div class="form-group">
-                                        <select class="form-control" wire:model='niveaux'>
+                                        <select class="form-control" wire:model.debounce='niveaux'>
                                             <option value="">Selectionnez une classe</option>
-                                            @foreach ($all_niveaux as $niveau)
+                                            @foreach ($all_niveaux as $key => $niveau)
                                             <option value="12">{{ $niveau->nom_niveau.' '.$niveau->options }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <button type="submit">valider</button>
-                                </form> --}}
-                                <select wire:model='niveaux'>
-                                    {{-- @foreach ($all_niveaux as $niveau) --}}
-                                         <option value="{{$all_niveaux->id}}">{{$all_niveaux->nom_niveau}}</option>
-                                    {{-- @endforeach --}}
-                                </select>
+                                </form>
                             </div>
 
                             {{-- @if ($n)

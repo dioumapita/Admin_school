@@ -10,9 +10,9 @@
 	<!-- Titre de la page -->
 	<title>{{ page_title($title) }}</title>
     <!-- google font -->
-    
+
     {{-- <link href="/assets/fonts/fonts.googleapis.com/css6079.css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" /> --}}
-    
+
 	<!-- icons -->
 	<link href="/assets/asset_principal/fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
 	<link href="/assets/asset_principal/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
 
 
 	<!--Start Plugins DataTables -->
-	<link href="/assets/asset_principal/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" 
+	<link href="/assets/asset_principal/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css"
 	rel="stylesheet" type="text/css"/>
 	<link href="/assets/asset_principal/plugins/datatables/export/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
 	<!-- End Plugins DataTables -->
@@ -59,6 +59,6 @@
 <!-- END HEAD THEME DARK -->
 <body
 	class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-dark dark-sidebar-color logo-dark dark-theme">
-	
+
     <!-- Start page wrapper -->
 	    <div class="page-wrapper">

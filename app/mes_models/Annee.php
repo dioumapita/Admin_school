@@ -11,8 +11,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $annee_scolaire
  * @property string $created_at
  * @property string $updated_at
+ * @property string $status
+ * @property AbsEleve[] $absEleves
+ * @property Emargement[] $emargements
+ * @property EmploisDeTemp[] $emploisDeTemps
  * @property Inscrit[] $inscrits
  * @property Note[] $notes
+ * @property PaiementEleve[] $paiementEleves
+ * @property PaiementEnseignant[] $paiementEnseignants
  */
 class Annee extends Model
 {
@@ -33,7 +39,31 @@ class Annee extends Model
     /**
      * @var array
      */
-    protected $fillable = ['debut_annee', 'fin_annee', 'annee_scolaire', 'created_at', 'updated_at'];
+    protected $fillable = ['debut_annee', 'fin_annee', 'annee_scolaire', 'created_at', 'updated_at', 'status'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function absEleves()
+    {
+        return $this->hasMany('App\mes_models\AbsEleve');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function emargements()
+    {
+        return $this->hasMany('App\mes_models\Emargement');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function emploisDeTemps()
+    {
+        return $this->hasMany('App\mes_models\EmploisDeTemp');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -49,5 +79,29 @@ class Annee extends Model
     public function notes()
     {
         return $this->hasMany('App\mes_models\Note');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function paiementEleves()
+    {
+        return $this->hasMany('App\mes_models\PaiementEleve');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function paiementEnseignants()
+    {
+        return $this->hasMany('App\mes_models\PaiementEnseignant');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function creditEnseignants()
+    {
+        return $this->hasMany('App\mes_models\CreditEnseignant');
     }
 }

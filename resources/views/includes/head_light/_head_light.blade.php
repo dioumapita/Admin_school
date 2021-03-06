@@ -10,9 +10,9 @@
 	<!--Titre de la page -->
 	<title>{{ page_title($title) }}</title>
     <!-- google font -->
-    
+
     {{-- <link href="/assets/fonts/fonts.googleapis.com/css6079.css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" /> --}}
-    
+
 
 	<!-- icons -->
 	<link href="/assets/asset_principal/fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
@@ -25,6 +25,16 @@
 	<link rel="stylesheet" href="/assets/asset_principal/plugins/material/material.min.css">
 	<link rel="stylesheet" href="/assets/asset_principal/css/material_style.css">
 	<!-- inbox style -->
+
+	<!--Start Plugins DataTables -->
+	<link href="/assets/asset_principal/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css"
+	rel="stylesheet" type="text/css"/>
+	<link href="/assets/asset_principal/plugins/datatables/export/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<!-- End Plugins DataTables -->
+	<!--Start Select utiliser pour faire une selection multiple-->
+    <link href="/assets/asset_principal/plugins/select2/css/select2.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/asset_principal/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!--End Select utiliser pour faire une selection multiple-->
 	<link href="/assets/asset_principal/css/pages/inbox.min.css" rel="stylesheet" type="text/css" />
 	<!--Start form steps -->
 	<link rel="stylesheet" href="/assets/asset_principal/plugins/steps/steps.css">
@@ -39,16 +49,20 @@
 	<link href="/assets/asset_principal/css/theme/light/theme-color.css" rel="stylesheet" type="text/css" />
 	<!-- My file css -->
 	<link rel="stylesheet" href="/assets/asset_principal/css/main.css">
+	<link rel="stylesheet" href="/assets/asset_principal/css/bulletin.css">
 	<!-- Date Time item CSS -->
 	<link rel="stylesheet" href="/assets/asset_principal/plugins/material-datetimepicker/bootstrap-material-datetimepicker.css" />
 	<!-- favicon -->
-	<link rel="shortcut icon" href="/assets/asset_principal/img/favicon.ico" />
-	<!-- laravel livewire Styles -->
+    <link rel="shortcut icon" href="/assets/asset_principal/img/favicon.ico" />
+    <script src="/assets/asset_principal/plugins/jquery/jquery.min.js"></script>
+    <script src="/assets/asset_principal/js/printThis.js"></script>
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
 		@livewireStyles
 </head>
 <!-- END HEAD LIGHT -->
 <body
-    class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
-    
+    class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md sidemenu-closed header-white white-sidebar-color logo-indigo">
+
     <!-- Start page wrapper -->
 	    <div class="page-wrapper">

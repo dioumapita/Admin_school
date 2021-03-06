@@ -226,4 +226,22 @@ class AnneeController extends Controller
         Flashy::primary('L\'année scolaire à été ajouter avec success');
             return redirect()->route('annees.index');
     }
+
+    /**on crée une methode permettant de selectionner l'année active
+     * autrementdit l'année scolaire selectionner par l'utilisateur
+     */
+
+    public function annee_active($id)
+    {
+        //on desactive l'année scolaire qui a pour status 1
+        $desactivation_annee = Annee::where('status',1)->update(['status' => 0]);
+        //on active l'année scolaire selectionner par l'utilisateur
+        
+        $activation_annee = Annee::where('id',$id)->update(['status' => 1]);
+
+        $annee_scolaire = Annee::where('id',$id)->first();
+
+        alert('Bienvenue','Dans l\'année scolaire '.$annee_scolaire->annee_scolaire.'.','success')->addImage('/assets/asset_principal/img_sweat_alert/user.png')->timerProgressBar();
+        return redirect()->route('home');
+    }
 }

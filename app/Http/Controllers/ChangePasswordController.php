@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use App\Traits\AnneeCourante;
+use App\mes_models\Annee;
 
 // use RealRashid\SweetAlert\Facades\Alert;
 
@@ -17,6 +19,7 @@ class ChangePasswordController extends Controller
 {
     use ThemeActive;
     use InfosUser;
+    use AnneeCourante;
     /**
      * ThemeActive est un trait qui permet de recuperer le chemin du 
      * theme activer avec la methode verifit_theme_active()
@@ -37,8 +40,10 @@ class ChangePasswordController extends Controller
         $telephone = $info_user_connecter->telephone;
         $adresse = $info_user_connecter->adresse;
         $avatar = $info_user_connecter->avatar;
+        $annee_courante = $this->verifit_annee_courante();
+        $all_annee = Annee::all();
 
-        return view('pages.changepassword.change_password',compact('chemin_theme_actif','nom','prenom','telephone','adresse','avatar'));
+        return view('pages.changepassword.change_password',compact('chemin_theme_actif','nom','prenom','telephone','adresse','avatar','annee_courante','all_annee'));
     }
 
     public function store(Request $request)

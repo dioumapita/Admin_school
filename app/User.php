@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\mes_models\Role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nom', 'prenom', 'username', 'email', 'telephone' ,'date_naiss', 'civilite', 'adresse', 'biographie', 'avatar' , 'password'
+        'nom', 'prenom', 'username', 'email', 'telephone' ,'date_naiss', 'civilite', 'adresse', 'biographie', 'avatar', 'diplome_obtenu', 'password'
     ];
 
     /**
@@ -49,4 +50,44 @@ class User extends Authenticatable
     }
 
     protected $dates = ['last_seen'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function roles(){
+        
+        return $this->belongsToMany(Role::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function enseigners()
+    {
+        return $this->hasMany('App\mes_models\Enseigner');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function emargements()
+    {
+        return $this->hasMany('App\mes_models\Emargement');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function paiementEnseignants()
+    {
+        return $this->hasMany('App\mes_models\PaiementEnseignant');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function creditEnseignants()
+    {
+        return $this->hasMany('App\mes_models\CreditEnseignant');
+    }
 }

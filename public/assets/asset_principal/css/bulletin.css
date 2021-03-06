@@ -1,0 +1,57 @@
+@media print{
+    
+    .font-bold {
+        font-weight: bold;
+    }
+    
+    .rouge{
+        color: rgb(255, 0, 0) !important;
+        font-style: italic !important;
+    }
+    .jaune{
+        color: yellow !important;
+        font-style: italic !important;
+    }
+    .vert{
+        color: rgb(6, 168, 6) !important;
+        font-style: italic !important;
+    }
+    #bordure_table{
+        border: 2px solid black !important;
+        font-size: 20px;
+    }
+    #bordure_tables{
+        width: 50px;
+        border: 2px solid black !important;
+        font-size: medium;
+        word-break: normal;
+    }
+
+   
+}
+
+
+.rouge{
+    color: rgb(255, 0, 0) !important;
+    font-style: italic !important;
+}
+.jaune{
+    color: yellow !important;
+    font-style: italic !important;
+}
+.vert{
+    color: rgb(6, 168, 6) !important;
+    font-style: italic !important;
+}
+#bordure_table{
+    border: 2px solid black !important;
+    font-size: 20px;
+}
+#bordure_tables{
+    border: 2px solid black !important;
+    font-size: medium;
+    word-break: normal;
+}
+
+
+

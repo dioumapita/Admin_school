@@ -1,4 +1,4 @@
-/* 
+/*
     Mon fichier css
 */
 .text-size
@@ -9,13 +9,13 @@
 {
     font-size: 18px;
 }
-/* 
+/*
 * utiliser pour les messages d'erreur au niveau du profil
  */
 #msg_error_profil{
     font-size: medium;
 }
-/* 
+/*
 *utiliser pour faire des espace vers la droite au niveau de la biographie
 *pour que l'affichage soi correcte si l'utilisateur n'a pas de biographie
  */
@@ -23,7 +23,7 @@
     margin-left: 1500px;
 }
 
-/* 
+/*
     utiliser pour gerer la taille du logo et du cachet de l'etablissement
 */
 #logo{
@@ -37,7 +37,7 @@
 }
 
 /* Start css utiliser pour le modal de suppression */
-.modal-confirm {		
+.modal-confirm {
 	color: #636363;
 	width: 400px;
 }
@@ -49,7 +49,7 @@
 	font-size: 14px;
 }
 .modal-confirm .modal-header {
-	border-bottom: none;   
+	border-bottom: none;
 	position: relative;
 }
 .modal-confirm h4 {
@@ -67,14 +67,14 @@
 }
 .modal-confirm .modal-footer {
 	border: none;
-	text-align: center;		
+	text-align: center;
 	border-radius: 5px;
 	font-size: 13px;
 	padding: 10px 15px 25px;
 }
 .modal-confirm .modal-footer a {
 	color: #999;
-}		
+}
 .modal-confirm .icon-box {
 	width: 80px;
 	height: 80px;
@@ -120,3 +120,339 @@
 	margin: 100px auto;
 }
 /* End css utiliser pour le modal de suppression */
+/*
+ utiliser au niveau de la table notes precisement au niveau des inputs
+ */
+#note {
+	width: 13%;
+}
+#note_unique {
+	width: 18%;
+}
+/* utiliser au niveau de liste des notes */
+#matricule {
+	width: 10%;
+}
+/* utiliser au niveau de l'impression des builletins et classement */
+/* utiliser pour le projet de voiture aussi */
+
+.souligner{
+    border-bottom: 5px;
+    border-bottom-width:50px;
+    border-bottom: solid 5px;
+}
+#ecriture{
+    font-size:x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#entete_facture{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: -2%;
+}
+#entete_facture2{
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -3%;
+}
+#entete_facture3
+{
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.70%;
+}
+
+#hauteur_image{
+    height: 178px;
+}
+#ligne_entete
+{
+    border-bottom: 5px;
+    border-bottom-width:50px;
+    border-bottom: solid 5px;
+    margin-top: 2%;
+    margin-right: -10%;
+}
+
+/* fin de css pour les voitures */
+#color-table{
+
+	background-image: url('../img/taille.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 590px;
+	font-size: 20px;
+	box-shadow: inset 0 0 0 1000px rgba(207, 49, 49, 0.2);
+
+}
+
+.cercle{
+	border: 5px solid;
+	border-radius: 20px;
+	padding: 0px;
+	margin-right: -33px;
+}
+
+.align-top{
+	text-align: center;
+	margin-top: -80px;
+
+}
+
+@media print{
+	.cercle{
+		border: 5px solid;
+		border-radius: 20px;
+		padding: 0px;
+		margin-right: -33px;
+	}
+	.align-top{
+		text-align: center;
+		margin-top: -68px;
+	}
+
+	#couleur{
+		background-image: url('../../asset_badge/image_fond/7.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center center;
+		background-repeat:no-repeat;
+	}
+
+	#couleur2{
+		background-image: url('../../asset_badge/image_fond/7.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center center;
+		background-repeat:no-repeat;
+	}
+	#taille{
+
+		width: 682px;
+	}
+	#title_card{
+		border-bottom: 3px double;
+		border-color: #297529;
+	}
+	.bordure{
+		border: 5px solid;
+		border-radius: 20px;
+		background-color: rgba(123, 209, 106, 0.541);
+
+
+	}
+	.inline{
+		font-size: medium;
+	}
+
+	.bordure{
+		border: 5px solid;
+		border-radius: 20px;
+		background-color: rgba(123, 209, 106, 0.541) !important;
+
+
+	}
+
+	/* pour le badge 2 */
+	#couleur_badge2_header{
+
+		background-image: url('../../asset_badge/image_fond/2.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	#couleur_badge2_content{
+		background-image: url('../../asset_badge/image_fond/20.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	#bordure_badge2{
+		border: 5px solid;
+		border-radius: 20px;
+		background-color: rgb(250, 9, 9) !important;
+	}
+	/* pour le badge 3 */
+	/* pour le badge 3 */
+
+	#couleur_badge3_header{
+
+		background-image: url('../../asset_badge/image_fond/14.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	#couleur_badge3_content{
+		background-image: url('../../asset_badge/image_fond/20.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	/* pour le badge 4 */
+
+	#couleur_badge4_header{
+
+		background-image: url('../../asset_badge/image_fond/7.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+		/* color: white; */
+	}
+
+	#couleur_badge4_content{
+		background-image: url('../../asset_badge/image_fond/27.jpg') !important;
+		background-size:cover;
+		-webkit-background-size:cover;
+		background-attachment:scroll;
+		background-position:center;
+		background-repeat:no-repeat;
+		/* color: white; */
+	}
+
+	#bordure_badge4{
+		border: 5px solid;
+		border-radius: 20px;
+		background-color: rgb(139, 194, 125) !important;
+	}
+}
+
+#couleur{
+
+	background-image: url('../../asset_badge/image_fond/7.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center center;
+	background-repeat:no-repeat;
+
+
+}
+
+#couleur2{
+
+	background-image: url('../../asset_badge/image_fond/7.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#title_card{
+	border-bottom: 3px double;
+	border-color: #297529;
+}
+.bordure{
+	border: 5px solid;
+	border-radius: 20px;
+	background-color: rgba(123, 209, 106, 0.541);
+
+
+}
+.inline{
+	font-size: medium;
+}
+/* pour le badge 2 */
+#couleur_badge2_header{
+
+	background-image: url('../../asset_badge/image_fond/2.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+#couleur_badge2_content{
+	background-image: url('../../asset_badge/image_fond/20.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+#bordure_badge2{
+	border: 5px solid;
+	border-radius: 20px;
+	background-color: rgb(250, 9, 9);
+}
+
+/* pour le badge 3 */
+
+#couleur_badge3_header{
+
+	background-image: url('../../asset_badge/image_fond/14.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+#couleur_badge3_content{
+	background-image: url('../../asset_badge/image_fond/20.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+/* pour le badge 4 */
+
+#couleur_badge4_header{
+
+	background-image: url('../../asset_badge/image_fond/7.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+	/* color: white; */
+}
+
+#couleur_badge4_content{
+	background-image: url('../../asset_badge/image_fond/27.jpg');
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+	/* color: white; */
+}
+
+#bordure_badge4{
+	border: 5px solid;
+	border-radius: 20px;
+	background-color: rgb(139, 194, 125);
+}
+
+@media screen{
+	#invisible-screen{
+		display: none;
+	}
+}
+#voiture{
+    width: 350px;
+    height: 250px;
+}
+#fond_ecran{
+    height: 30px;
+}
+

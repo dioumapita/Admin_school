@@ -4,14 +4,14 @@
         <!-- logo start -->
         <div class="page-logo">
             <a href="#">
-                <span class="logo-icon material-icons fa-rotate-45">school</span>
-                <span class="logo-default">A.School</span> </a>
+                <span class="logo-icon material-icons fa-rotate-45">time_to_leave</span>
+                <span class="logo-default">Y-Gestion</span> </a>
         </div>
         <!-- logo end -->
         <ul class="nav navbar-nav navbar-left in">
             <li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
         </ul>
-        <form class="search-form-opened" action="#" method="GET">
+        {{-- <form class="search-form-opened" action="#" method="GET">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search..." name="query">
                 <span class="input-group-btn">
@@ -20,7 +20,8 @@
                     </a>
                 </span>
             </div>
-        </form>
+        </form> --}}
+
         <!-- start mobile menu -->
         <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
             data-target=".navbar-collapse">
@@ -30,9 +31,37 @@
         <!-- start header menu -->
         <div class="top-menu">
             <ul class="nav navbar-nav pull-right">
+                <!--start annee scolaire -->
+                {{-- <li class="dropdown dropdown-user">
+                    <a href="javascript:;" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown"
+                        data-close-others="true">
+                        Année Scolaire:
+                        <span class="username username-hide-on-mobile"> {{ $annee_courante->annee_scolaire }} </span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        @foreach ($all_annee as $annee)
+                                <li>
+                                        @if ($annee->annee_scolaire == $annee_courante->annee_scolaire)
+                                        <a href="#">
+                                            <i class="icon-check"></i>
+                                            {{ $annee->annee_scolaire }}
+                                        </a>
+                                        @else
+                                        <a href="{{ route('annee_active',$annee) }}">
+                                            <i class="icon-calendar"></i>
+                                            {{ $annee->annee_scolaire }}
+                                        </a>
+                                        @endif
+
+                                </li>
+                        @endforeach
+                    </ul>
+                </li> --}}
+                <!-- end annee scolaire -->
                 <li><a href="javascript:;" class="fullscreen-btn"><i class="fa fa-arrows-alt"></i></a></li>
                 <!-- start language menu -->
-                <li class="dropdown language-switch">
+                {{-- <li class="dropdown language-switch">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img
                             src="/assets/asset_principal/img/flags/gb.png" class="position-left" alt=""> English <span
                             class="fa fa-angle-down"></span>
@@ -54,10 +83,10 @@
                             <a class="russian"><img src="/assets/asset_principal/img/flags/ru.png" alt=""> Русский</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <!-- end language menu -->
                 <!-- start notification dropdown -->
-                <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                {{-- <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                         data-close-others="true">
                         <i class="fa fa-bell-o"></i>
@@ -128,10 +157,10 @@
                             </div>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <!-- end notification dropdown -->
                 <!-- start message dropdown -->
-                <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                {{-- <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                         data-close-others="true">
                         <i class="fa fa-envelope-o"></i>
@@ -211,7 +240,7 @@
                             </div>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <!-- end message dropdown -->
                 <!-- start manage user dropdown -->
                 <li class="dropdown dropdown-user">
@@ -228,10 +257,10 @@
                         </li>
                         <li>
                             <a href="#">
-                                <i class="icon-settings"></i> Settings
+                                <i class="icon-settings"></i> site web
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="#">
                                 <i class="icon-directions"></i> Help
                             </a>
@@ -241,7 +270,7 @@
                             <a href="lock_screen.html">
                                 <i class="icon-lock"></i> Lock
                             </a>
-                        </li>
+                        </li> --}}
                         <li>
                             @livewire('deconnexion')
                         </li>

@@ -370,6 +370,16 @@ code {
     background-color: #e91e63 !important;
     color: #fff !important;
 }
+.desactiver,
+.label.desactiver {
+    background-color: #9c9a9a !important;
+    color: #fff !important;
+}
+.comptabilite,
+.label.comptabilite {
+    background-color: #9b3006 !important;
+    color: #fff !important;
+}
 .bg-warning{
     color: #fff;
     background-color: #ffd200;
@@ -4084,7 +4094,7 @@ ul.chat.nice-chat {
     border-top: 3px solid #DD4B39;
 }
 .card-topline-purple {
-    border-top: 3px solid #ad5bff;
+    border-top: 3px solid #9b3006;
 }
 .card-topline-gray {
     border-top: 3px solid #ddd;
