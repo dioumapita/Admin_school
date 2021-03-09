@@ -84,7 +84,7 @@ class FournisseurController extends Controller
          * à selectionner l'image
          */
 
-        if($request->file('phone_fournisseur'))
+        if($request->file('photo_fournisseur'))
         {
             /**
             * Validation de l'upload d'image

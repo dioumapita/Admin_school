@@ -1,13 +1,6 @@
 @extends($chemin_theme_actif,['title' => 'Arrivage'])
 @section('content')
-<style>
-    @media print{
-        #media_screen{
-            display:none;
-        }
-    }
-</style>
-    <div id="media_screen" class="page-bar">
+    <div class="page-bar">
         <div class="page-title-breadcrumb">
             <div class=" pull-left">
                 <div class="page-title">Liste Des Arrivages</div>
@@ -22,7 +15,7 @@
             </ol>
         </div>
     </div>
-    <div id="media_screen" class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="card card-topline-red">
                 <div class="card-head">
@@ -103,7 +96,7 @@
                                     </div>
                                 </div>
                             <!-- fin modal -->
-                            <a  onclick="printDiv('liste_arrivage')" href="#" class="btn btn-primary"><i class="fa fa-print"></i> Imprimer</a>
+                            <a id="imprimer" href="#" class="btn btn-primary"><i class="fa fa-print"></i> Imprimer la liste des fournisseurs</a>
                         </div>
                     </div>
                     <div class="table-scrollable">
@@ -210,159 +203,8 @@
         </div>
     </div>
     <br><br>
-    <div id="liste_arrivage" class="row">
-        <style>
-            @media print {
-                /* utiliser pour le projet de voiture aussi */
-
-                .souligner{
-                    border-bottom: 5px;
-                    border-bottom-width:50px;
-                    border-bottom: solid 5px;
-                }
-                #ecriture{
-                    font-size:x-large;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-                #entete_facture{
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-style: italic;
-                    margin-top: -2%;
-                }
-                #entete_facture2{
-                    font-size:large;
-                    font-family: Arial, Helvetica, sans-serif;
-                    margin-top: -3%;
-                }
-                #entete_facture3
-                {
-                    font-size:large;
-                    font-family: Arial, Helvetica, sans-serif;
-                    margin-top: 0.70%;
-                }
-
-                #hauteur_image{
-                    height: 178px;
-                }
-                #ligne_entete
-                {
-                    border-bottom: 5px;
-                    border-bottom-width:50px;
-                    border-bottom: solid 5px;
-                    margin-top: 2%;
-                    margin-right: -3%;
-                }
-            }
-        </style>
-        <div id="invisible-screens" class="col-md-12">
-            <div class="white-box">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <div class="pull-left">
-                                <address>
-                                    <div class="row">
-                                        <div>
-                                            <img id="hauteur_image" class="img-thumbnail" src="/images/photos/logos/gauche.png" alt="logo_voiture">
-                                        </div>
-                                        <div class="center">
-                                            <h3 id="entete_facture" class="mx-auto text-center font-bold">&ensp;ETABLISSEMENT YACOUBA BAH ET FRERE</h3>
-                                            <div id="entete_facture2">
-                                                Commerçant Import Et Export
-                                            </div>
-                                            <div id="entete_facture3">
-                                                Vendeur Des Pièces Détachées, Poids Lourds
-                                            </div>
-                                            <div id="entete_facture3">
-                                                Vehicules Et Pneu
-                                            </div>
-                                            <div id="entete_facture3">
-                                                Tél: 622-57-13-11 / 621-01-74-15 / 628-56-11-15
-                                                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
-                                            </div>
-                                            <div id="entete_facture3">
-                                                 E-mail: yagoubabah2@gmail.com - Conakry - Rep de Guinée<br>
-                                            </div>
-                                            <div id="entete_facture3">
-                                                Site Web: ndspiece.com
-                                            </div>
-                                            <div id="ligne_entete">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </address>
-                            </div>
-                            <div class="pull-right text-right">
-                                <address>
-                                    <div class="row">
-                                        <div>
-                                            <img id="hauteur_image" class="img-thumbnail" src="/images/photos/logos/droite.jpg" alt="logo_voiture">
-                                        </div>
-                                    </div>
-                                </address>
-                            </div>
-                        </div>
-                        <br><br>
-                        <div class="row pull-right col-md-12 col-sm-12 col-lg-12">
-                            <div class="pull-right col-md-12 col-sm-12 col-lg-12">
-                                <div class="cercles">
-                                    <div class="pull-right">
-                                        <h4 class="font-bold">
-                                            <br>
-                                           Conakry, le {{ date('d/m/Y') }}
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row col-md-12 col-sm-12 col-lg-12">
-                            <div class="mx-auto col-md-12 col-sm-12 col-lg-12">
-                                <div class="cercles">
-                                    <div class="text-center">
-                                        <h1 class="font-bold">
-                                            <i class="souligner">Liste Des Arrivages</i>
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <table id="bordure_table" class="table table-bordered">
-                                <th class="text-center" id="bordure_table">N°</th>
-                                <th class="text-center" id="bordure_table"> Arrivage </th>
-                                <th class="text-center" id="bordure_table"> Date </th>
-                                <tbody id="bordure_table">
-                                    @foreach ($all_arrivages as $arrivage)
-                                        <tr id="bordure_table">
-                                            <td class="text-center" id="bordure_table">{{ $b++ }}</td>
-                                            <td class="text-center" id="bordure_table">{{$arrivage->nom_arrivage}}</td>
-                                            <td class="text-center" id="bordure_table">{{$arrivage->date_arrivage->format('d/m/Y') }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 {{-- script utiliser pour la suppression un fournisseur --}}
-<!--Script d'impression -->
-<script>
-    function printDiv(liste_arrivage) {
-            var printContents = document.getElementById('liste_arrivage').innerHTML;
-            var originalContents = document.body.innerHTML;
-
-            document.body.innerHTML = printContents;
-
-            window.print();
-
-            document.body.innerHTML = originalContents;
-    }
-</script>
 <script>
     function deleteData(id)
          {

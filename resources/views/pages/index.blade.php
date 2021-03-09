@@ -8,8 +8,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="slider_content">
-                                        <h2>NDSPIECE</h2>
-                                        <h1>Leader De La Vente De Voiture Et De Pièce En Guinée</h1>
+                                        <h1 class="">NDSPIECE</h1>
+                                        <h1 class="">Leader de la vente de pièce en guinée</h1>
                                         {{-- <a class="button" href="shop.html">shopping now</a> --}}
                                     </div>
                                 </div>

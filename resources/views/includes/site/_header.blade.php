@@ -55,7 +55,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-3">
                     <div class="logo">
-                        <a href="index.html"><img src="/assets/asset_site/img/logo/nds5.png" alt=""></a>
+                       <img src="/assets/asset_site/img/logo/nds5.png" alt="" srcset="">
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-9">
@@ -153,7 +153,7 @@
                     <div class="header_bottom_container">
                         <div class="categories_menu">
                             <div class="categories_title">
-                                <h2 class="categori_toggle">Catégories</h2>
+                                <h2 class="categori_toggle">Catégorie</h2>
                             </div>
                             <div class="categories_menu_toggle">
                                 <ul>
@@ -408,6 +408,7 @@
                                         </ul>
                                     </li> --}}
                                     <li><a href="#">Accueil</a></li>
+                                    <li><a href="#">Coopérative</a></li>
                                     <li><a href="#">A PROPOS</a></li>
                                     <li><a href="#">NOUS CONTACTER</a></li>
                                 </ul>
